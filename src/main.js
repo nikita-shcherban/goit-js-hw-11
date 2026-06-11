@@ -37,7 +37,11 @@ function handleSubmit(event) {
     })
     .catch(error => {
       console.error(error);
-      hideLoader();
+      iziToast.error({
+          message:
+            'Sorry, an error occurred. Please try again!',
+          position: 'topRight',
+        });
     })
     .finally(() => {
       hideLoader();
